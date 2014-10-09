@@ -21,6 +21,7 @@ import org.apache.cordova.CordovaResourceApi;
 import org.apache.cordova.PluginResult;
 
 import com.ipaulpro.afilechooser.utils.FileUtils;
+import android.util.Base64;
 
 /**
  * FileChooser is a PhoneGap plugin that acts as polyfill for Android KitKat and web
@@ -57,9 +58,16 @@ public class FileChooser extends CordovaPlugin {
                         Log.i(TAG, "Uri = " + uri.toString());
                         JSONObject obj = new JSONObject();
                         try {
-                            // Get the file path from the URI
-                            final String path = FileUtils.getPath(this.cordova.getActivity(), uri);
-                            obj.put("filepath", path);
+                            // from http://stackoverflow.com/questions/19882331/html-file-input-in-android-webview-android-4-4-kitkat
+                            obj.put("filepath", FileUtils.getPath(this.cordova.getActivity(), uri));
+                            obj.put("name", FileUtils.getFile(this.cordova.getActivity(), uri).getName());
+                            obj.put("type", FileUtils.getMimeType(this.cordova.getActivity(), uri));
+
+                            // attach the actual file content as base64 encoded string
+                            byte[] content = FileUtils.readFile(this.cordova.getActivity(), uri);
+                            String base64Content = Base64.encodeToString(content, Base64.DEFAULT);
+                            obj.put("content", base64Content);
+
                             this.callbackContext.success(obj);
                         } catch (Exception e) {
                             Log.e("FileChooser", "File select error", e);

@@ -35,6 +35,7 @@ import com.ianhanniballake.localstorage.LocalStorageProvider;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Comparator;
 
@@ -58,6 +59,11 @@ public class FileUtils {
     public static final String MIME_TYPE_APP = "application/*";
 
     public static final String HIDDEN_PREFIX = ".";
+
+    public static byte[] readFile(final Context context, final Uri uri) throws IOException {
+        File file = FileUtils.getFile(context, uri);
+        return org.apache.commons.io.FileUtils.readFileToByteArray(file);
+    }
 
     /**
      * Gets the extension of a file name, like ".png" or ".jpg".
