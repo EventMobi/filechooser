@@ -1,6 +1,8 @@
 
 package com.ianhanniballake.localstorage;
 
+import com.fivetouchsolutions.<$event_directory$>.R;
+
 import android.content.res.AssetFileDescriptor;
 import android.database.Cursor;
 import android.database.MatrixCursor;

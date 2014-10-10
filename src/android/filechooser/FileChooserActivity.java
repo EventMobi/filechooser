@@ -16,6 +16,8 @@
 
 package com.ipaulpro.afilechooser;
 
+import com.fivetouchsolutions.<$event_directory$>.R;
+
 import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;

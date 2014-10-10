@@ -16,6 +16,8 @@
 
 package com.ipaulpro.afilechooser;
 
+import com.fivetouchsolutions.<$event_directory$>.R;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

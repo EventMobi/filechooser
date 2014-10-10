@@ -1,5 +1,7 @@
 package com.cesidiodibenedetto.filechooser;
 
+import com.fivetouchsolutions.<$event_directory$>.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
