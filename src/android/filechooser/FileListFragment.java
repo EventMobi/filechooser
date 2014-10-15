@@ -16,7 +16,7 @@
 
 package com.ipaulpro.afilechooser;
 
-import com.fivetouchsolutions.<$event_directory$>.R;
+import com.fivetouchsolutions.<$reverse_domain_name_extension$>.R;
 
 import android.app.Activity;
 import android.os.Bundle;
