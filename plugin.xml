@@ -52,7 +52,7 @@
             </activity>
             <provider
                 android:name="com.ianhanniballake.localstorage.LocalStorageProvider"
-                android:authorities="com.ianhanniballake.localstorage.documents"
+                android:authorities="$PACKAGE_NAME.localstorage.documents"
                 android:enabled="@bool/use_provider"
                 android:exported="true"
                 android:grantUriPermissions="true"
