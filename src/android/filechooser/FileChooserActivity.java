@@ -16,7 +16,7 @@
 
 package com.ipaulpro.afilechooser;
 
-import com.fivetouchsolutions.<$reverse_domain_name_extension$>.R;
+import com.fivetouchsolutions.{{reverse_domain_name_extension}}.R;
 
 import android.app.ActionBar;
 import android.content.BroadcastReceiver;
