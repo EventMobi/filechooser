@@ -1,6 +1,6 @@
 package com.cesidiodibenedetto.filechooser;
 
-import com.fivetouchsolutions.<$reverse_domain_name_extension$>.R;
+import com.fivetouchsolutions.{{reverse_domain_name_extension}}.R;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
 
 package com.ianhanniballake.localstorage;
 
-import com.fivetouchsolutions.<$reverse_domain_name_extension$>.R;
+import com.fivetouchsolutions.{{reverse_domain_name_extension}}.R;
 
 import android.content.res.AssetFileDescriptor;
 import android.database.Cursor;
